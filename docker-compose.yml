@@ -1,0 +1,10 @@
+version: '2'
+services:
+  redis:
+    image: redis:3.2.5-alpine
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:8080"
+    volumes:
+      - /d/SimpleAnswers/frontend:/app
